@@ -5,7 +5,7 @@ const CTASection = () => (
   <Box textAlign="center">
     <Link
       _hover={undefined}
-      href="https://github.com/sozonome/vite-react-chakra-starter"
+      href="https://github.com/yumanuralfath/PortoClient"
     >
       <Button leftIcon={<AiFillGithub />} size="sm">
         Open in Github

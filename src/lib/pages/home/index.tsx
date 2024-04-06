@@ -1,5 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { Grid } from '@chakra-ui/react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Analytics } from '@vercel/analytics/react';
 
 import CTASection from './components/CTASection';
@@ -8,7 +8,7 @@ import SomeText from './components/SomeText';
 
 const Home = () => {
   return (
-    <Grid gap={4}>
+    <Grid gap={2}>
       <SomeText />
       <SomeImage />
       <CTASection />
