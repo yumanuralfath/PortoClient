@@ -12,8 +12,8 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 const pwaOptions: Partial<VitePWAOptions> = {
   registerType: 'autoUpdate',
   manifest: {
-    short_name: 'vite-react-chakra-starter',
-    name: 'Vite React App Template',
+    short_name: 'porto-yuma',
+    name: 'Portofolio Web Yuma Nur Alfath',
     lang: 'en',
     start_url: '/',
     background_color: '#FFFFFF',
