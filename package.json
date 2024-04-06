@@ -1,8 +1,9 @@
 {
-  "name": "vite-react-chakra-starter",
-  "version": "0.1.0",
+  "name": "portofolio-vite-yumana",
+  "version": "1.0.0",
+  "description": "Portofolio menggunakan vite, react dan chakra",
   "private": true,
-  "author": "sozonome",
+  "author": "yumanauralfath",
   "type": "module",
   "scripts": {
     "dev": "vite",

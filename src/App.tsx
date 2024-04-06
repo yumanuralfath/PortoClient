@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 

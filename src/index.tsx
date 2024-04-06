@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import { ColorModeScript } from '@chakra-ui/react';
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -5,6 +6,7 @@ import ReactDOM from 'react-dom/client';
 // fonts
 import '@fontsource/plus-jakarta-sans/latin.css';
 
+// eslint-disable-next-line import/extensions
 import { theme } from '~/lib/styles/theme';
 
 import App from './App';

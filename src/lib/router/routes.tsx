@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 import type { PathRouteProps } from 'react-router-dom';
 
