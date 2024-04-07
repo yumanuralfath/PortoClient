@@ -10,5 +10,3 @@ export const routes: Array<PathRouteProps> = [
     element: <Home />,
   },
 ];
-
-export const privateRoutes: Array<PathRouteProps> = [];

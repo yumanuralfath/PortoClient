@@ -10,9 +10,9 @@ const Footer = () => {
       justifyContent="center"
     >
       <Text fontSize="xs">
-        {new Date().getFullYear()} -{' '}
-        <Link href="https://sznm.dev" isExternal>
-          sznm.dev
+        ©️ {new Date().getFullYear()} -{' '}
+        <Link href="https://www.linkedin.com/in/yumana/" isExternal>
+          Yumana ✨ All Rights Reserved.
         </Link>
       </Text>
     </Flex>

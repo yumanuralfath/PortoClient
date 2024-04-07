@@ -3,7 +3,8 @@
   "version": "1.0.1",
   "description": "Portofolio menggunakan vite, react dan chakra",
   "private": true,
-  "author": "yumanauralfath",
+  "author": "Yuma Nur Alfath<yumanuralfath2@gmail.com>",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
