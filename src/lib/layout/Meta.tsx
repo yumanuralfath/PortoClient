@@ -5,7 +5,7 @@ const APP_NAME = 'Portofolio-vite-yumanuralfath';
 const Meta = () => {
   return (
     <Helmet>
-      <title>Portofolio Yuma Nur Alfath</title>
+      <title>Yuma Nur Alfath</title>
       <meta name="description" content="Portofolio Yuma Nur Alfath" />
 
       <meta name="application-name" content={APP_NAME} />
