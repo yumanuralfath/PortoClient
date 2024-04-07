@@ -1,9 +1,7 @@
-import { Text, Link, useColorModeValue } from '@chakra-ui/react';
+import { Link, Image } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 
-import ChickIcon from './icons/chick';
-
-const LogoBox = styled.span`
+const LogoBox = styled('span')`
   font-weight: bold;
   font-size: 18px;
   display: inline-flex;
@@ -25,13 +23,8 @@ const Logo = () => {
   return (
     <Link href="/">
       <LogoBox>
-        <ChickIcon />
-        <Text
-          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-          fontWeight="bold"
-        >
-          YUMA
-        </Text>
+        <Image width={8} src="/assets/chick.svg" />
+        Yuma
       </LogoBox>
     </Link>
   );

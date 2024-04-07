@@ -14,8 +14,14 @@ const Header = () => {
       justifyContent="center"
       gridGap={2}
     >
-      <Box marginLeft="auto">
+      <Box marginRight="auto">
         <Logo />
+      </Box>
+      <h1>Work</h1>
+      <h1>Work</h1>
+      <h1>Work</h1>
+      <h1>Work</h1>
+      <Box marginLeft="auto">
         <ThemeToggle />
       </Box>
     </Flex>
