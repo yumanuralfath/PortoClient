@@ -9,6 +9,8 @@ const keywords = [
   'yuma unand',
   'yuma web developer',
   'yuma porto',
+  'yumanuralfath',
+  'yuma',
 ];
 
 const Meta = () => {

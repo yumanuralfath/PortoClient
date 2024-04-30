@@ -1,7 +1,9 @@
-import { Link, Image } from '@chakra-ui/react';
+import { Link, Text } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 
-const LogoBox = styled('span')`
+import Chick from './Chick';
+
+const LogoBox = styled.span`
   font-weight: bold;
   font-size: 18px;
   display: inline-flex;
@@ -23,8 +25,10 @@ const Logo = () => {
   return (
     <Link href="/">
       <LogoBox>
-        <Image width={8} src="/assets/chick.svg" />
-        Yuma
+        <Chick />
+        <Text fontSize="large" fontWeight="bold">
+          YUMA
+        </Text>
       </LogoBox>
     </Link>
   );
