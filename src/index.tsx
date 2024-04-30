@@ -2,7 +2,8 @@
 import { ColorModeScript } from '@chakra-ui/react';
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 // fonts
 import '@fontsource/plus-jakarta-sans/latin.css';
 
@@ -17,6 +18,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ColorModeScript initialColorMode={theme.config?.initialColorMode} />
+    <SpeedInsights />
+    <Analytics />
     <App />
   </React.StrictMode>
 );

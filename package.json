@@ -3,7 +3,8 @@
   "version": "1.0.1",
   "description": "Portofolio menggunakan vite, react dan chakra",
   "private": true,
-  "author": "yumanauralfath",
+  "author": "Yuma Nur Alfath<yumanuralfath2@gmail.com>",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -19,7 +20,8 @@
     "up-latest": "pnpm up-interactive -L",
     "release": "standard-version",
     "push-release": "git push --follow-tags origin main",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate-sitemap": "node generate-sitemap.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
@@ -34,7 +36,8 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.0.1",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "sitemap": "^7.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.2.0",
@@ -48,6 +51,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.57.0",
     "eslint-config-sznm": "^2.0.3",
+    "fs": "0.0.1-security",
     "husky": "^9.0.11",
     "knip": "^5.1.1",
     "lint-staged": "^15.2.2",
@@ -58,7 +62,8 @@
     "vite": "^5.1.7",
     "vite-plugin-checker": "^0.6.4",
     "vite-plugin-pwa": "^0.19.4",
-    "vite-tsconfig-paths": "^4.3.2"
+    "vite-tsconfig-paths": "^4.3.2",
+    "zlib": "^1.0.5"
   },
   "engines": {
     "node": ">=16.x.x",
