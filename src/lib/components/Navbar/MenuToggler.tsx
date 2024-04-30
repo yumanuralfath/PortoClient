@@ -3,13 +3,9 @@ import {
   Center,
   Stack,
   useDisclosure,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  DrawerBody,
   IconButton,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import {
   RiAccountBoxLine,
@@ -51,6 +47,20 @@ const Navbar = () => {
     };
   }, []);
 
+  const menuVariants = {
+    hidden: {
+      opacity: 0,
+      y: -50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <Center>
       <Stack spacing={4} direction={isMobile ? 'column' : 'row'}>
@@ -66,7 +76,11 @@ const Navbar = () => {
 
         {/* Show menu items */}
         {!isMobile && (
-          <>
+          <motion.div
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <Button variant="ghost" leftIcon={<RiAccountBoxLine />}>
               About
             </Button>
@@ -79,48 +93,8 @@ const Navbar = () => {
             <Button variant="ghost" leftIcon={<RiContactsBookLine />}>
               Contact
             </Button>
-          </>
+          </motion.div>
         )}
-
-        {/* Drawer for mobile */}
-        <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
-          <DrawerOverlay />
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerBody>
-              <Stack spacing={4} direction="column">
-                <Button
-                  variant="ghost"
-                  leftIcon={<RiAccountBoxLine />}
-                  onClick={onClose}
-                >
-                  About
-                </Button>
-                <Button
-                  variant="ghost"
-                  leftIcon={<RiBriefcase4Line />}
-                  onClick={onClose}
-                >
-                  Project
-                </Button>
-                <Button
-                  variant="ghost"
-                  leftIcon={<RiDraftLine />}
-                  onClick={onClose}
-                >
-                  Blog
-                </Button>
-                <Button
-                  variant="ghost"
-                  leftIcon={<RiContactsBookLine />}
-                  onClick={onClose}
-                >
-                  Contact
-                </Button>
-              </Stack>
-            </DrawerBody>
-          </DrawerContent>
-        </Drawer>
       </Stack>
     </Center>
   );
