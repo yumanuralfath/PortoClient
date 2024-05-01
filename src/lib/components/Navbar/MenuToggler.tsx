@@ -50,11 +50,11 @@ const Navbar = () => {
   const menuVariants = {
     hidden: {
       opacity: 0,
-      y: -50,
+      x: -100,
     },
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
       transition: {
         duration: 0.5,
       },
