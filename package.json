@@ -28,6 +28,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@fontsource/plus-jakarta-sans": "^5.0.19",
+    "@fullpage/react-fullpage": "^0.1.42",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
     "framer-motion": "^11.0.14",

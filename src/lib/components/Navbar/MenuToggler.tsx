@@ -12,7 +12,7 @@ import {
   RiBriefcase4Line,
   RiDraftLine,
   RiContactsBookLine,
-  RiMenuLine,
+  RiStackFill,
 } from 'react-icons/ri';
 
 const Navbar = () => {
@@ -64,11 +64,10 @@ const Navbar = () => {
   return (
     <Center>
       <Stack spacing={4} direction={isMobile ? 'column' : 'row'}>
-        {/* Show hamburger icon only on small screens */}
         {isMobile && (
           <IconButton
             aria-label="Menu"
-            icon={<RiMenuLine />}
+            icon={<RiStackFill />}
             onClick={toggleMobileView}
             variant="ghost"
           />
@@ -85,7 +84,7 @@ const Navbar = () => {
               About
             </Button>
             <Button variant="ghost" leftIcon={<RiBriefcase4Line />}>
-              Project
+              Projects
             </Button>
             <Button variant="ghost" leftIcon={<RiDraftLine />}>
               Blog
