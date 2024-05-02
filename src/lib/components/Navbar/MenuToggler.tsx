@@ -4,6 +4,7 @@ import {
   Stack,
   useDisclosure,
   IconButton,
+  Link,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
@@ -12,7 +13,6 @@ import {
   RiBriefcase4Line,
   RiDraftLine,
   RiContactsBookLine,
-  RiStackFill,
 } from 'react-icons/ri';
 
 const Navbar = () => {
@@ -67,7 +67,7 @@ const Navbar = () => {
         {isMobile && (
           <IconButton
             aria-label="Menu"
-            icon={<RiStackFill />}
+            // icon={}
             onClick={toggleMobileView}
             variant="ghost"
           />
@@ -80,18 +80,26 @@ const Navbar = () => {
             initial="hidden"
             animate="visible"
           >
-            <Button variant="ghost" leftIcon={<RiAccountBoxLine />}>
-              About
-            </Button>
-            <Button variant="ghost" leftIcon={<RiBriefcase4Line />}>
-              Projects
-            </Button>
-            <Button variant="ghost" leftIcon={<RiDraftLine />}>
-              Blog
-            </Button>
-            <Button variant="ghost" leftIcon={<RiContactsBookLine />}>
-              Contact
-            </Button>
+            <Link href="/About">
+              <Button variant="ghost" leftIcon={<RiAccountBoxLine />}>
+                About
+              </Button>
+            </Link>
+            <Link href="#Projects">
+              <Button variant="ghost" leftIcon={<RiBriefcase4Line />}>
+                Projects
+              </Button>
+            </Link>
+            <Link href="#Blog">
+              <Button variant="ghost" leftIcon={<RiDraftLine />}>
+                Blog
+              </Button>
+            </Link>
+            <Link href="#Contact">
+              <Button variant="ghost" leftIcon={<RiContactsBookLine />}>
+                Contact
+              </Button>
+            </Link>
           </motion.div>
         )}
       </Stack>
