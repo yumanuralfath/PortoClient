@@ -3,20 +3,16 @@ import {
   Center,
   Stack,
   useDisclosure,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  DrawerBody,
   IconButton,
+  Link,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import {
   RiAccountBoxLine,
   RiBriefcase4Line,
   RiDraftLine,
   RiContactsBookLine,
-  RiMenuLine,
 } from 'react-icons/ri';
 
 const Navbar = () => {
@@ -51,14 +47,27 @@ const Navbar = () => {
     };
   }, []);
 
+  const menuVariants = {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <Center>
       <Stack spacing={4} direction={isMobile ? 'column' : 'row'}>
-        {/* Show hamburger icon only on small screens */}
         {isMobile && (
           <IconButton
             aria-label="Menu"
-            icon={<RiMenuLine />}
+            // icon={}
             onClick={toggleMobileView}
             variant="ghost"
           />
@@ -66,61 +75,33 @@ const Navbar = () => {
 
         {/* Show menu items */}
         {!isMobile && (
-          <>
-            <Button variant="ghost" leftIcon={<RiAccountBoxLine />}>
-              About
-            </Button>
-            <Button variant="ghost" leftIcon={<RiBriefcase4Line />}>
-              Project
-            </Button>
-            <Button variant="ghost" leftIcon={<RiDraftLine />}>
-              Blog
-            </Button>
-            <Button variant="ghost" leftIcon={<RiContactsBookLine />}>
-              Contact
-            </Button>
-          </>
+          <motion.div
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <Link href="/About">
+              <Button variant="ghost" leftIcon={<RiAccountBoxLine />}>
+                About
+              </Button>
+            </Link>
+            <Link href="#Projects">
+              <Button variant="ghost" leftIcon={<RiBriefcase4Line />}>
+                Projects
+              </Button>
+            </Link>
+            <Link href="#Blog">
+              <Button variant="ghost" leftIcon={<RiDraftLine />}>
+                Blog
+              </Button>
+            </Link>
+            <Link href="#Contact">
+              <Button variant="ghost" leftIcon={<RiContactsBookLine />}>
+                Contact
+              </Button>
+            </Link>
+          </motion.div>
         )}
-
-        {/* Drawer for mobile */}
-        <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
-          <DrawerOverlay />
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerBody>
-              <Stack spacing={4} direction="column">
-                <Button
-                  variant="ghost"
-                  leftIcon={<RiAccountBoxLine />}
-                  onClick={onClose}
-                >
-                  About
-                </Button>
-                <Button
-                  variant="ghost"
-                  leftIcon={<RiBriefcase4Line />}
-                  onClick={onClose}
-                >
-                  Project
-                </Button>
-                <Button
-                  variant="ghost"
-                  leftIcon={<RiDraftLine />}
-                  onClick={onClose}
-                >
-                  Blog
-                </Button>
-                <Button
-                  variant="ghost"
-                  leftIcon={<RiContactsBookLine />}
-                  onClick={onClose}
-                >
-                  Contact
-                </Button>
-              </Stack>
-            </DrawerBody>
-          </DrawerContent>
-        </Drawer>
       </Stack>
     </Center>
   );

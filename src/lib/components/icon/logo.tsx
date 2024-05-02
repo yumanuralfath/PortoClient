@@ -1,5 +1,6 @@
-import { Link, Text } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/react';
 import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
 import Chick from './Chick';
 
@@ -25,10 +26,13 @@ const Logo = () => {
   return (
     <Link href="/">
       <LogoBox>
-        <Chick />
-        <Text fontSize="large" fontWeight="bold">
-          YUMA
-        </Text>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          onHoverStart={() => {}}
+          onHoverEnd={() => {}}
+        >
+          <Chick />
+        </motion.a>
       </LogoBox>
     </Link>
   );
